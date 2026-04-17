@@ -1,0 +1,17 @@
+{
+  "name": "claude-skills",
+  "owner": {
+    "name": "David Else"
+  },
+  "plugins": [
+    {
+      "name": "software-engineering",
+      "source": "./software-engineering",
+      "version": "1.0.0",
+      "description": "Engineering practices: implementation planning, TDD, DDD, .NET/C# API design, React web-app design.",
+      "author": { "name": "David Else" },
+      "category": "engineering-practices",
+      "keywords": ["tdd", "ddd", "dotnet", "csharp", "react", "planning", "api-design"]
+    }
+  ]
+}

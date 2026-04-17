@@ -1,0 +1,9 @@
+{
+  "name": "software-engineering",
+  "version": "1.0.0",
+  "description": "Coding preferences and engineering practices covering planning, TDD, DDD, .NET/C# API design, and React web apps.",
+  "author": {
+    "name": "David Else"
+  },
+  "skills": ["./skills/"]
+}
