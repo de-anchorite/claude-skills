@@ -16,7 +16,7 @@
     {
       "name": "ebook-publishing",
       "source": "./ebook-publishing",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "Fiction ebook writing and publishing skills: book profiling, cover design, story planning, editing (structural/line/proofreading), and publishing.",
       "author": { "name": "David Else" },
       "category": "writing",
