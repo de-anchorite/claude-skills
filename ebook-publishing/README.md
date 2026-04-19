@@ -2,8 +2,6 @@
 
 A Claude Code plugin for fiction ebook authors. Covers the full lifecycle: book setup, planning, cover design, editing, and publishing.
 
-> **Status:** `book-profile` and `cover-design` are fully implemented. All other skills are stubs — they will tell you they are coming soon if invoked.
-
 ## Install
 
 Add this marketplace to Claude Code, then install the `ebook-publishing` plugin.
@@ -14,17 +12,17 @@ Add this marketplace to Claude Code, then install the `ebook-publishing` plugin.
 |---|---|---|
 | `book-profile` | ✅ Ready | Create book profile and scaffold project directory |
 | `cover-design` | ✅ Ready | Generate AI image prompts and iterate to final cover |
-| `story-development` | 🚧 Stub | Beat sheet and plot structure |
-| `character-development` | 🚧 Stub | Character profiles with arc and voice |
-| `chapter-planning` | 🚧 Stub | Scene-by-scene chapter outline |
-| `writing-style` | 🚧 Stub | Prose style guide and sample passage |
-| `series-planner` | 🚧 Stub | Multi-book series arc and bible |
-| `structural-editing` | 🚧 Stub | Big-picture plot and structure review |
-| `content-line-editing` | 🚧 Stub | Grammar, consistency, POV, style (Word Track Changes) |
-| `proofreading` | 🚧 Stub | Final spelling and punctuation pass (Word Track Changes) |
-| `book-description` | 🚧 Stub | Back-cover blurbs in three styles |
-| `publishing-metadata` | 🚧 Stub | BISAC categories, Amazon categories, keywords |
-| `marketing-copy` | 🚧 Stub | Ads, social posts, newsletter, ARC email |
+| `story-development` | ✅ Ready | Beat sheet and plot structure |
+| `character-development` | ✅ Ready | Character profiles with arc and voice |
+| `chapter-planning` | ✅ Ready | Scene-by-scene chapter outline |
+| `writing-style` | ✅ Ready | Prose style guide and sample passage |
+| `series-planner` | ✅ Ready | Multi-book series arc and bible |
+| `structural-editing` | ✅ Ready | Big-picture plot and structure review |
+| `content-line-editing` | ✅ Ready | Grammar, consistency, POV, style (Word Track Changes) |
+| `proofreading` | ✅ Ready | Final spelling and punctuation pass (Word Track Changes) |
+| `book-description` | ✅ Ready | Back-cover blurbs in three styles |
+| `publishing-metadata` | ✅ Ready | BISAC categories, Amazon categories, keywords |
+| `marketing-copy` | ✅ Ready | Ads, social posts, newsletter, ARC email |
 
 ## Start here
 
