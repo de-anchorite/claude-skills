@@ -16,7 +16,27 @@ Read `book-profile.md` from the current directory or any parent `book-NN/` direc
 - Protagonist description
 - Overall tone
 
-## Step 2 — Gather visual brief
+## Step 2 — Cover dimensions
+
+Ask before anything visual:
+> "What format is this cover for? This determines the pixel dimensions and aspect ratio used in all prompts."
+
+Options:
+
+| Option | Format | Dimensions | Aspect ratio | Notes |
+|---|---|---|---|---|
+| A | Amazon KDP ebook (Kindle) | **1600 × 2560 px** | 5:8 | Standard for Kindle store |
+| B | Wide ebook (Kobo, Apple Books, D2D) | **1600 × 2560 px** | 5:8 | Same as KDP ebook |
+| C | KDP print — 6×9" trim | **1800 × 2700 px** | 2:3 | 300 DPI, no bleed (add bleed in cover design tool) |
+| D | KDP print — 5×8" trim | **1500 × 2400 px** | 5:8 | 300 DPI, no bleed |
+| E | IngramSpark print | varies | varies | Ask user for trim size; calculate: width × 300, height × 300 |
+| F | Custom | user specifies | calculated | Ask for pixel dimensions |
+
+Record the selected **dimensions** and **aspect ratio** — use them in every prompt generated in this session.
+
+If the user needs both ebook and print covers, design for the ebook dimensions first, then offer to generate print-sized variants in Step 6.
+
+## Step 3 — Gather visual brief
 
 Ask these questions one at a time:
 
@@ -46,7 +66,7 @@ Ask these questions one at a time:
    - Horror: dark, unsettling imagery, high contrast
    - Literary fiction: abstract, typographic, painterly
 
-## Step 3 — Generate 3–5 concept prompts
+## Step 4 — Generate 3–5 concept prompts
 
 Generate distinct concept variations — not tweaks of one idea. Cover each of these angles (skip any that clearly don't fit after the brief):
 
@@ -70,14 +90,15 @@ Lighting: <golden hour / cold overcast / dramatic chiaroscuro / neon glow / etc.
 Colour: <specific palette description>
 Mood: <emotional quality>
 Composition: <rule of thirds / central subject / wide establishing / close crop / etc.>
-Aspect ratio: 6:9 (portrait, standard book cover)
+Dimensions: <use the dimensions selected in Step 2, e.g., 1600 × 2560 px>
+Aspect ratio: <use the ratio selected in Step 2, e.g., 5:8 for KDP ebook>
 Negative prompt: <what to exclude: text, watermarks, multiple figures if unwanted, etc.>
 
 Full prompt (copy this into your image tool):
 "<assembled single-paragraph prompt combining all elements above>"
 ```
 
-## Step 4 — Execute or output prompts
+## Step 5 — Execute or output prompts
 
 **Check for MCP image generation tool:**
 
@@ -90,21 +111,22 @@ If no MCP image tool is available, output all prompts formatted for three platfo
 [paste the full prompt above]
 
 === For Midjourney ===
-/imagine prompt: [full prompt] --ar 2:3 --style raw --v 6
+/imagine prompt: [full prompt] --ar <ratio from Step 2, e.g. 5:8 for KDP ebook> --style raw --v 6
 
 === For Stable Diffusion / ComfyUI ===
 Positive prompt: [full prompt]
 Negative prompt: [negative prompt from above]
-Aspect ratio: 512x768 or 832x1216
+Width × Height: <dimensions from Step 2, e.g. 1600 × 2560 for KDP ebook>
+(If your UI requires smaller sizes, use proportional: 640 × 1024 for 5:8, 512 × 768 for 2:3)
 ```
 
 Tell the user to generate images for each concept and return here when ready to iterate.
 
-## Step 5 — Concept selection
+## Step 6 — Concept selection
 
 Ask the user which concept (or concepts) they want to develop further. Ask what they liked and what they'd change.
 
-## Step 6 — Iteration loop
+## Step 7 — Iteration loop
 
 Refine the selected concept. Offer these refinement levers:
 
@@ -112,13 +134,17 @@ Refine the selected concept. Offer these refinement levers:
 - **Framing** — closer crop, wider establishing, different angle
 - **Colour grading** — shift palette (e.g., more desaturated, deeper shadows, highlight colour)
 - **Element changes** — add/remove/replace focal elements
-- **Aspect ratio variants** — generate versions for: 6:9 (standard), 1:1 (social), 16:9 (banner/wide)
+- **Format variants** — once approved, offer to generate for other formats:
+  - Primary format (selected in Step 2) — already done
+  - 1:1 square (1600 × 1600 px) — social media / thumbnail
+  - 16:9 wide (2560 × 1440 px) — banner / wide promotional use
+  - Alternate print size if ebook was primary (or vice versa)
 
 Generate an updated prompt for each refinement request. Execute via MCP if available.
 
 Continue until the user approves a final image.
 
-## Step 7 — Typography specification
+## Step 8 — Typography specification
 
 Once the final image is approved, produce a typography specification:
 
@@ -147,13 +173,16 @@ Colour: <colour>
 <Any specific guidance: avoid placing text over busy areas of the image, use negative space at top, etc.>
 ```
 
-## Step 8 — Save cover brief
+## Step 9 — Save cover brief
 
 Save `covers/cover-brief.md` in the book directory:
 
 ```markdown
 ---
 final_concept: "<concept letter and label>"
+format: "<e.g., Amazon KDP ebook>"
+dimensions: "<e.g., 1600 × 2560 px>"
+aspect_ratio: "<e.g., 5:8>"
 image_prompt: "<final approved prompt>"
 typography: "<summary of typography spec>"
 ---
