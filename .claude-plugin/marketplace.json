@@ -12,6 +12,15 @@
       "author": { "name": "David Else" },
       "category": "engineering-practices",
       "keywords": ["tdd", "ddd", "dotnet", "csharp", "react", "planning", "api-design"]
+    },
+    {
+      "name": "ebook-publishing",
+      "source": "./ebook-publishing",
+      "version": "1.0.0",
+      "description": "Fiction ebook writing and publishing skills: book profiling, cover design, story planning, editing (structural/line/proofreading), and publishing.",
+      "author": { "name": "David Else" },
+      "category": "writing",
+      "keywords": ["ebook", "fiction", "writing", "publishing", "cover-design", "editing", "kdp"]
     }
   ]
 }
