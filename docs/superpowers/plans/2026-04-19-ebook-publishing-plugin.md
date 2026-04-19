@@ -463,7 +463,370 @@ git commit -m "feat(ebook-publishing): add cover-design skill"
 
 ---
 
-## Task 4: story-development skill
+> **Note:** Tasks 4–14 are stubs. Each creates a minimal SKILL.md that gracefully tells the user the skill is not yet implemented. Full content will be written in a follow-up plan once book-profile and cover-design are working.
+
+---
+
+## Task 4: story-development skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/story-development/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/story-development/SKILL.md`:
+
+```markdown
+---
+name: story-development
+description: "Create a genre-aware story beat sheet and plot structure for a fiction book. Triggers: 'develop my plot', 'create beat sheet', 'plan my story', 'story structure', 'outline my novel'."
+---
+
+# Story Development
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will build a complete beat sheet, act breakdown, plot points, subplot threads, and pacing notes tailored to your genre.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/story-development/SKILL.md
+git commit -m "feat(ebook-publishing): add story-development stub"
+```
+
+---
+
+## Task 5: character-development skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/character-development/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/character-development/SKILL.md`:
+
+```markdown
+---
+name: character-development
+description: "Build deep character profiles including wound, want, need, arc, and dialogue voice for fiction characters. Triggers: 'develop my character', 'character profile', 'build character arc', 'character development'."
+---
+
+# Character Development
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will build complete character profiles — psychological depth, arc trajectory, relationship map, and distinctive voice.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/character-development/SKILL.md
+git commit -m "feat(ebook-publishing): add character-development stub"
+```
+
+---
+
+## Task 6: chapter-planning skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/chapter-planning/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/chapter-planning/SKILL.md`:
+
+```markdown
+---
+name: chapter-planning
+description: "Create a scene-by-scene chapter outline with goals, conflicts, POV, and word count targets. Triggers: 'plan my chapters', 'chapter outline', 'scene list', 'outline my chapters'."
+---
+
+# Chapter Planning
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will produce a chapter-by-chapter scene list with goals, conflicts, POV assignments, and word count targets.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/chapter-planning/SKILL.md
+git commit -m "feat(ebook-publishing): add chapter-planning stub"
+```
+
+---
+
+## Task 7: writing-style skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/writing-style/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/writing-style/SKILL.md`:
+
+```markdown
+---
+name: writing-style
+description: "Create a prose style guide: POV rules, tense, voice, dialogue conventions, genre dos/don'ts. Triggers: 'create style guide', 'define my writing style', 'establish my voice', 'writing style'."
+---
+
+# Writing Style
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will produce a complete prose style guide covering POV rules, voice, dialogue conventions, locale, and genre-specific guidance.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/writing-style/SKILL.md
+git commit -m "feat(ebook-publishing): add writing-style stub"
+```
+
+---
+
+## Task 8: series-planner skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/series-planner/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/series-planner/SKILL.md`:
+
+```markdown
+---
+name: series-planner
+description: "Plan a multi-book fiction series: arc, per-book summaries, character trajectory, world-building continuity, series bible. Can convert a standalone project to series layout. Triggers: 'plan my series', 'series arc', 'series bible', 'series planner'."
+---
+
+# Series Planner
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will plan multi-book series arcs, character trajectories, world-building continuity, and offer to convert standalone projects to series directory layout.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/series-planner/SKILL.md
+git commit -m "feat(ebook-publishing): add series-planner stub"
+```
+
+---
+
+## Task 9: structural-editing skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/structural-editing/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/structural-editing/SKILL.md`:
+
+```markdown
+---
+name: structural-editing
+description: "Big-picture developmental edit: plot holes, pacing, character arc consistency, scene necessity. No prose or grammar feedback. Triggers: 'structural edit', 'developmental edit', 'big picture edit', 'review my plot structure'."
+---
+
+# Structural Editing
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will review your draft for plot logic, pacing, character arc consistency, and scene necessity — producing a Word report with prioritised issues.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/structural-editing/SKILL.md
+git commit -m "feat(ebook-publishing): add structural-editing stub"
+```
+
+---
+
+## Task 10: content-line-editing skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/content-line-editing/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/content-line-editing/SKILL.md`:
+
+```markdown
+---
+name: content-line-editing
+description: "Line edit fiction chapters: grammar, consistency, continuity, POV enforcement, style adherence, locale. Produces Word Track Changes output. Triggers: 'line edit', 'content edit', 'edit my chapter', 'check consistency', 'copy edit'."
+---
+
+# Content and Line Editing
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will line edit chapters for grammar, consistency, continuity, POV enforcement, and style — producing Word Track Changes output.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/content-line-editing/SKILL.md
+git commit -m "feat(ebook-publishing): add content-line-editing stub"
+```
+
+---
+
+## Task 11: proofreading skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/proofreading/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/proofreading/SKILL.md`:
+
+```markdown
+---
+name: proofreading
+description: "Final proofread: spelling, punctuation, typos, formatting only. No content or structural suggestions. Produces Word Track Changes output. Triggers: 'proofread', 'final proofread', 'check for errors', 'spelling and punctuation'."
+---
+
+# Proofreading
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will do a final spelling, punctuation, and formatting pass on near-complete drafts — producing Word Track Changes output with no content opinions.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/proofreading/SKILL.md
+git commit -m "feat(ebook-publishing): add proofreading stub"
+```
+
+---
+
+## Task 12: book-description skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/book-description/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/book-description/SKILL.md`:
+
+```markdown
+---
+name: book-description
+description: "Write fiction book blurbs and back-cover descriptions in three hook styles, short and long versions. Triggers: 'write my blurb', 'book description', 'back cover copy', 'Amazon description'."
+---
+
+# Book Description
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will write three blurb variants (hook-led, character-led, question-led) in short and long form, genre-coded for your target audience.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/book-description/SKILL.md
+git commit -m "feat(ebook-publishing): add book-description stub"
+```
+
+---
+
+## Task 13: publishing-metadata skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/publishing-metadata/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/publishing-metadata/SKILL.md`:
+
+```markdown
+---
+name: publishing-metadata
+description: "Generate publishing metadata: BISAC categories, Amazon browse categories, 7 keywords, series fields, content rating, ISBN guidance. Triggers: 'publishing metadata', 'Amazon categories', 'kdp metadata', 'book keywords'."
+---
+
+# Publishing Metadata
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will generate BISAC categories, Amazon browse category paths, 7 discoverability keywords, series metadata, content rating, and ISBN guidance.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/publishing-metadata/SKILL.md
+git commit -m "feat(ebook-publishing): add publishing-metadata stub"
+```
+
+---
+
+## Task 14: marketing-copy skill (stub)
+
+**Files:**
+- Create: `ebook-publishing/skills/marketing-copy/SKILL.md`
+
+- [ ] **Step 1: Write stub SKILL.md**
+
+Write `ebook-publishing/skills/marketing-copy/SKILL.md`:
+
+```markdown
+---
+name: marketing-copy
+description: "Write fiction book marketing copy: Amazon/Facebook ads, social media launch posts, newsletter announcement, ARC request email. Triggers: 'write marketing copy', 'create ads', 'launch copy', 'social posts', 'ARC email'."
+---
+
+# Marketing Copy
+
+> **Coming soon.** This skill is not yet fully implemented.
+>
+> When ready, this skill will write ad copy, a social media launch post set, newsletter announcement, and ARC request email template.
+>
+> For now, run `book-profile` to set up your project, and `cover-design` for cover work.
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add ebook-publishing/skills/marketing-copy/SKILL.md
+git commit -m "feat(ebook-publishing): add marketing-copy stub"
+```
 
 **Files:**
 - Create: `ebook-publishing/skills/story-development/SKILL.md`
@@ -1855,58 +2218,36 @@ Write `ebook-publishing/README.md`:
 ```markdown
 # ebook-publishing
 
-A Claude Code plugin for fiction ebook authors. 13 skills covering the full lifecycle: book setup, planning, cover design, editing, and publishing.
+A Claude Code plugin for fiction ebook authors. Covers the full lifecycle: book setup, planning, cover design, editing, and publishing.
+
+> **Status:** `book-profile` and `cover-design` are fully implemented. All other skills are stubs — they will tell you they are coming soon if invoked.
 
 ## Install
 
-Add this marketplace to Claude Code, then install the `ebook-publishing` plugin:
-
-```
-https://raw.githubusercontent.com/davidelse/claude-skills/main/.claude-plugin/marketplace.json
-```
+Add this marketplace to Claude Code, then install the `ebook-publishing` plugin.
 
 ## Skills
 
-| Skill | Purpose | Run when |
+| Skill | Status | Purpose |
 |---|---|---|
-| `book-profile` | Create book profile and directory structure | First — all other skills depend on this |
-| `cover-design` | Generate AI image prompts and iterate to final cover | Any time |
-| `story-development` | Beat sheet and plot structure | Early planning |
-| `character-development` | Character profiles with arc and voice | Early planning |
-| `chapter-planning` | Scene-by-scene chapter outline | After story-development |
-| `writing-style` | Prose style guide and sample passage | Before drafting |
-| `series-planner` | Multi-book series arc and bible | When planning a series |
-| `structural-editing` | Big-picture plot and structure review | After first draft |
-| `content-line-editing` | Grammar, consistency, POV, style | After structural edit |
-| `proofreading` | Final spelling and punctuation pass | Last before publication |
-| `book-description` | Back-cover blurbs in three styles | Pre-publication |
-| `publishing-metadata` | BISAC categories, Amazon categories, keywords | Pre-publication |
-| `marketing-copy` | Ads, social posts, newsletter, ARC email | Launch |
+| `book-profile` | ✅ Ready | Create book profile and scaffold project directory |
+| `cover-design` | ✅ Ready | Generate AI image prompts and iterate to final cover |
+| `story-development` | 🚧 Stub | Beat sheet and plot structure |
+| `character-development` | 🚧 Stub | Character profiles with arc and voice |
+| `chapter-planning` | 🚧 Stub | Scene-by-scene chapter outline |
+| `writing-style` | 🚧 Stub | Prose style guide and sample passage |
+| `series-planner` | 🚧 Stub | Multi-book series arc and bible |
+| `structural-editing` | 🚧 Stub | Big-picture plot and structure review |
+| `content-line-editing` | 🚧 Stub | Grammar, consistency, POV, style (Word Track Changes) |
+| `proofreading` | 🚧 Stub | Final spelling and punctuation pass (Word Track Changes) |
+| `book-description` | 🚧 Stub | Back-cover blurbs in three styles |
+| `publishing-metadata` | 🚧 Stub | BISAC categories, Amazon categories, keywords |
+| `marketing-copy` | 🚧 Stub | Ads, social posts, newsletter, ARC email |
 
-## Recommended workflow
+## Start here
 
-1. Run `book-profile` → creates directory structure and `book-profile.md`
-2. Run planning skills in any order: `story-development`, `character-development`, `chapter-planning`, `writing-style`
-3. Write your draft chapters in `drafts/` as `.docx` files
-4. Run `structural-editing` on the complete draft
-5. Run `content-line-editing` chapter by chapter
-6. Run `proofreading` on the near-final draft
-7. Run `book-description`, `publishing-metadata`, `marketing-copy` before launch
-8. Run `cover-design` any time
-
-## Word document output
-
-Editing skills produce `.docx` files with Track Changes where tooling is available. Priority order:
-1. Office MCP tool (if configured)
-2. python-docx (if Python installed)
-3. pandoc (if installed)
-4. Markdown fallback
-
-Install pandoc for reliable `.docx` output without additional configuration: https://pandoc.org/installing.html
-
-## Series support
-
-`book-profile` asks whether your project is standalone or a series and scaffolds the appropriate directory structure. `series-planner` can also convert an existing standalone project to a series layout.
+1. Run `book-profile` — sets up your project directory and saves `book-profile.md`
+2. Run `cover-design` — generates image prompts and iterates to a final cover
 ```
 
 - [ ] **Step 2: Commit**
