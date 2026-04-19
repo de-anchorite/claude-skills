@@ -46,7 +46,12 @@ ebook-publishing/
 
 **Trigger:** "set up my book", "create book profile", or invoked automatically when another skill finds no `book-profile.md`.
 
+**Extraction from existing content:**
+Before asking questions, skill scans the current directory for existing files (`.md`, `.txt`, `.docx` if readable). If found, it reads them and extracts what it can infer: character names, setting, tone, genre signals, plot elements. It presents extracted fields to the user for confirmation or correction, then asks only for what it could not infer.
+
 **Gathers:**
+- Standalone or series? (first question — determines directory structure)
+- If series: series name, planned book count, this book's number in the series
 - Title, genre, subgenre
 - Word count target
 - Protagonist(s), antagonist
@@ -56,7 +61,49 @@ ebook-publishing/
 - Target audience
 - Comparable titles ("comps")
 
-**Produces:** `book-profile.md` in project root — YAML front-matter with all fields, plus a prose summary paragraph.
+**Scaffolds directory structure:**
+
+Single-book layout:
+```
+<project-root>/
+  book-profile.md
+  planning/
+    story-development.md      ← populated by story-development skill
+    character-development.md  ← populated by character-development skill
+    chapter-planning.md       ← populated by chapter-planning skill
+    writing-style.md          ← populated by writing-style skill
+  drafts/
+    chapter-01.md             ← author writes here
+  editing/
+    structural-edit.md        ← populated by structural-editing skill
+    line-edit.md              ← populated by content-line-editing skill
+  publishing/
+    book-description.md       ← populated by book-description skill
+    publishing-metadata.md    ← populated by publishing-metadata skill
+    marketing-copy.md         ← populated by marketing-copy skill
+  covers/
+    cover-brief.md            ← populated by cover-design skill
+    prompts/                  ← generated image prompts
+```
+
+Series layout (scaffolded at series root, one book subdirectory created per book):
+```
+<series-root>/
+  series-planner.md           ← populated by series-planner skill
+  book-01/
+    book-profile.md
+    planning/
+    drafts/
+    editing/
+    publishing/
+    covers/
+  book-02/                    ← added when book 2 is set up
+    ...
+```
+
+All skills resolve paths relative to the nearest `book-profile.md` — they work correctly whether the project is standalone or a subdirectory within a series.
+
+**Produces:** `book-profile.md` in project root (or `book-NN/` subdirectory for series) — YAML front-matter with all fields, plus a prose summary paragraph. Creates directory scaffold if directories do not already exist.
 
 ---
 
@@ -157,7 +204,9 @@ User selects a concept. Skill refines: adjusts lighting, framing, colour grading
 
 **Gathers:** Number of books planned, series arc vs. standalone-with-connections, recurring characters, world-building elements to develop across books, release strategy intent.
 
-**Produces:** Series arc overview, per-book arc summaries, character development trajectory across books, world-building continuity plan, series bible outline, release cadence recommendations.
+**Directory scaffolding:** If invoked on an existing single-book project (no series root detected), offers to convert the layout to series structure — moves current book into `book-01/`, creates `series-root/series-planner.md`, and sets up `book-02/` skeleton. Non-destructive: no existing files deleted or overwritten.
+
+**Produces:** `series-planner.md` at series root — series arc overview, per-book arc summaries, character development trajectory across books, world-building continuity plan, series bible outline, release cadence recommendations.
 
 ---
 
