@@ -68,28 +68,30 @@ Single-book layout:
 <project-root>/
   book-profile.md
   planning/
-    story-development.md      ← populated by story-development skill
-    character-development.md  ← populated by character-development skill
-    chapter-planning.md       ← populated by chapter-planning skill
-    writing-style.md          ← populated by writing-style skill
+    story-development.md        ← populated by story-development skill (machine-readable by other skills)
+    character-development.md    ← populated by character-development skill
+    chapter-planning.md         ← populated by chapter-planning skill
+    writing-style.md            ← populated by writing-style skill
   drafts/
-    chapter-01.md             ← author writes here
+    chapter-01.docx             ← author writes here; Word format
+    chapter-02.docx
   editing/
-    structural-edit.md        ← populated by structural-editing skill
-    line-edit.md              ← populated by content-line-editing skill
+    structural-edit-report.docx ← populated by structural-editing skill
+    line-edit-ch01.docx         ← populated by content-line-editing skill (Track Changes)
+    proofread-ch01.docx         ← populated by proofreading skill (Track Changes)
   publishing/
-    book-description.md       ← populated by book-description skill
-    publishing-metadata.md    ← populated by publishing-metadata skill
-    marketing-copy.md         ← populated by marketing-copy skill
+    book-description.md         ← populated by book-description skill (consumed by marketing-copy)
+    publishing-metadata.md      ← populated by publishing-metadata skill (structured YAML)
+    marketing-copy.docx         ← populated by marketing-copy skill
   covers/
-    cover-brief.md            ← populated by cover-design skill
-    prompts/                  ← generated image prompts
+    cover-brief.md              ← populated by cover-design skill
+    prompts/                    ← generated image prompts (.md)
 ```
 
 Series layout (scaffolded at series root, one book subdirectory created per book):
 ```
 <series-root>/
-  series-planner.md           ← populated by series-planner skill
+  series-planner.md           ← populated by series-planner skill (machine-readable)
   book-01/
     book-profile.md
     planning/
@@ -214,13 +216,13 @@ User selects a concept. Skill refines: adjusts lighting, framing, colour grading
 
 **Trigger:** "structural edit", "review my plot structure", "big picture edit".
 
-**Reads:** `book-profile.md` + draft plan and/or draft chapters.
+**Reads:** `book-profile.md` + draft plan (`.md`) and/or draft chapters (`.docx` or `.md`).
 
 **Scope (strict):** Plot holes, structural weaknesses, pacing, character arc consistency, scene purpose and necessity, act balance, story logic.
 
 **Out of scope:** Line-level prose, grammar, spelling — skill does not comment on these.
 
-**Produces:** Structural edit report — prioritised issues list, suggested restructures, chapter-level notes, questions for the author to consider.
+**Produces:** `editing/structural-edit-report.docx` — Word document containing a prioritised issues list, suggested restructures, chapter-level notes, and questions for the author. Structural edits are report-style (not Track Changes), since suggestions often involve moving or replacing whole scenes rather than inline text changes. Falls back to `.md` if Word tooling unavailable.
 
 ---
 
@@ -228,13 +230,18 @@ User selects a concept. Skill refines: adjusts lighting, framing, colour grading
 
 **Trigger:** "line edit", "content edit", "edit my chapter(s)", "check consistency".
 
-**Reads:** `book-profile.md` + draft chapter(s) or full manuscript.
+**Reads:** `book-profile.md` + `writing-style.md` (if present) + draft chapter(s) (`.docx` preferred, `.md` accepted).
 
 **Scope (strict):** Grammar, internal consistency, continuity errors, POV enforcement, style guide adherence, locale accuracy (UK/US/AU English), sentence-level clarity and flow, word choice.
 
 **Out of scope:** Structural changes (those belong in structural-editing), basic spelling/punctuation nitpicks (those belong in proofreading).
 
-**Produces:** Inline edit suggestions with explanations, continuity error log, POV violation flags, style deviation notes.
+**Track Changes output:** Produces an edited copy of each input chapter as `editing/line-edit-<chapter>.docx` with Word Track Changes (insertions, deletions, comments). Reviewer name set to "Claude Edit". Continuity errors and POV violations added as Word Review comments on the relevant passage.
+
+**Tooling priority:**
+1. Office MCP tool (if configured) — native Track Changes
+2. `python-docx` with revision XML — Track Changes without MCP
+3. `.md` with `~~deleted~~` / `**inserted**` diff markup — last resort fallback
 
 ---
 
@@ -242,13 +249,13 @@ User selects a concept. Skill refines: adjusts lighting, framing, colour grading
 
 **Trigger:** "proofread", "check for errors", "final proofread".
 
-**Reads:** Near-final draft chapter(s) or full manuscript.
+**Reads:** Near-final draft chapter(s) (`.docx` preferred, `.md` accepted).
 
 **Scope (strict):** Spelling, punctuation, formatting consistency, typos, missing or doubled words, capitalisation errors — nothing else.
 
 **Out of scope:** Content, structure, style, clarity — skill actively declines to make these suggestions even if issues are noticed.
 
-**Produces:** Error list with location references (chapter, paragraph), zero content opinions.
+**Track Changes output:** Produces `editing/proofread-<chapter>.docx` with Word Track Changes showing only spelling/punctuation corrections. No comments, no margin notes with content opinions. Same tooling priority as content-line-editing.
 
 ---
 
@@ -329,3 +336,27 @@ Add to `.claude-plugin/marketplace.json`:
 - Genre support: romance, thriller, fantasy, sci-fi, horror, literary fiction — embedded in skill prompt logic
 - Locale support (content-line-editing, writing-style): UK / US / AU English
 - `book-profile.md` format: YAML front-matter + prose — consistent across all skills that read it
+
+## File Formats
+
+**Two categories of file:**
+
+| Category | Format | Reason |
+|---|---|---|
+| Machine-readable (consumed by other skills) | `.md` with YAML front-matter | Skills read these; must be plain text |
+| Human-facing output (drafts, edits, publishing copy) | `.docx` preferred, `.md` fallback | Word is the author's working environment |
+
+**`.md` files (always):** `book-profile.md`, `story-development.md`, `character-development.md`, `chapter-planning.md`, `writing-style.md`, `series-planner.md`, `book-description.md`, `publishing-metadata.md`, `cover-brief.md`, prompt files.
+
+**`.docx` files (preferred, `.md` fallback):** Draft chapters, structural edit report, line-edited chapters, proofread chapters, marketing copy.
+
+## Tooling for Word Output
+
+Editing skills (content-line-editing, proofreading) require Word Track Changes. Skills check for tooling at runtime in this priority order:
+
+1. **Office MCP tool** (e.g., configured `mcp__office__*` tools) — native `.docx` Track Changes, highest fidelity
+2. **python-docx** (if `python` available in shell) — programmatic `.docx` with revision XML markup
+3. **pandoc** (if available) — `.docx` creation without Track Changes; edits shown as `[DELETED: x] [INSERTED: y]` comment blocks
+4. **`.md` fallback** — `~~deleted~~` / `**inserted**` diff markup with a warning that Track Changes unavailable
+
+Skills announce which method they are using at the start of an editing session.
