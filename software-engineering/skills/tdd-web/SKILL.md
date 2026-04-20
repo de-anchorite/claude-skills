@@ -1,9 +1,9 @@
 ---
-name: web-app-design
-description: "Preferred patterns and conventions for building React web applications with Vite, Tailwind, DaisyUI, TanStack Query, and Storybook. Apply proactively to all frontend work."
+name: tdd-web
+description: "Use when building React components, hooks, pages, or features; working with Vite, Tailwind, DaisyUI, TanStack Query, Storybook, or MSW; writing frontend tests with Vitest; or asked to build a web app, UI, or frontend feature."
 ---
 
-# Web App Design (React)
+# Web App Design (React/TypeScript)
 
 Preferred patterns and conventions for building React web applications. Apply proactively to all frontend work.
 
@@ -112,3 +112,7 @@ Logic only — utility functions, data transforms, custom hook logic, validation
 ## Working style
 
 Keep components small. Split when complex — don't add props. Prefer composition over configuration.
+
+## Planning and workflow
+
+**REQUIRED:** Follow the `development-workflow` skill for planning, per-task review, and git commits. Use the `web-` prefix for plan files (e.g. `.claude/plans/web-<feature-name>.md`). Each deliverable unit (component, hook, page) is one unit of work.

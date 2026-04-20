@@ -1,9 +1,9 @@
 ---
-name: tdd
-description: "Test-first development rules: red-green-refactor, behaviour-based testing, xUnit with Testcontainers, GivenA builders, and WhenBehaviour naming. Apply to all coding tasks."
+name: tdd-net
+description: "Use when implementing .NET/C# features or bugfixes, writing xUnit tests, working with Testcontainers, or asked to use TDD, write tests first, or do red-green-refactor. Apply to all .NET/C# coding tasks."
 ---
 
-# Test-Driven Development
+# Test-Driven Development (.NET/C#)
 
 All code is written test-first. These rules are non-negotiable and apply to every coding task.
 
@@ -23,7 +23,7 @@ Apply this skill to all coding tasks involving implementation, tests, or refacto
 ## The cycle
 
 ```
-PLAN     → Write test plan before any code (see Planning section)
+PLAN     → Write test plan (see development-workflow skill)
 RED      → Write a failing test for the next behaviour
 GREEN    → Write minimum code to pass it
 REFACTOR → Clean up with all tests green; no new behaviour
@@ -33,41 +33,9 @@ COMMIT   → git commit accepted changes; mark cycle done in plan
 
 Cycles are short — minutes, not hours.
 
-## Planning
+## Planning and workflow
 
-Before any code, write a test plan to `.claude/plans/tdd-<feature-name>.md`. Format:
-
-```markdown
-# TDD Plan: <feature name>
-
-## Test cases
-- [ ] Simplest happy path: <description>
-- [ ] Happy path: <description>
-- [ ] ...
-- [ ] Unhappy path: <description>
-- [ ] ...
-- [ ] Edge case: <description>
-- [ ] ...
-- [ ] Corner case: <description>
-- [ ] ...
-```
-
-Order cases following the Sequencing section. After each committed cycle, update the plan — mark the completed case `[x]` and save the file.
-
-## Review and commit
-
-After each RED → GREEN → REFACTOR cycle:
-
-1. **Stop.** Do not proceed to the next test case.
-2. **Show the user** a summary of what changed (files modified, test name, what behaviour was added).
-3. **Wait for explicit approval** before committing. If the user requests changes, make them and re-show.
-4. **On approval**, run:
-   ```
-   git add <changed files>
-   git commit -m "<conventional commit message describing the behaviour added>"
-   ```
-5. **Mark the test case `[x]`** in `.claude/plans/tdd-<feature-name>.md` and save it.
-6. Proceed to the next test case.
+**REQUIRED:** Follow the `development-workflow` skill for planning, per-cycle review, and git commits. Use the `tdd-` prefix for plan files (e.g. `.claude/plans/tdd-<feature-name>.md`). Each TDD cycle (RED → GREEN → REFACTOR) is one unit of work.
 
 ## Stubbing new methods
 
