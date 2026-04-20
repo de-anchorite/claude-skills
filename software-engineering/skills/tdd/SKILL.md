@@ -54,6 +54,18 @@ public class WhenAddingAUser
 }
 ```
 
+## Assertions
+
+Prefer **FluentAssertions** (NuGet: `FluentAssertions`) over bare xUnit `Assert.*`.
+
+```csharp
+result.Should().Be(42);
+user.Should().NotBeNull();
+response.StatusCode.Should().Be(HttpStatusCode.Conflict);
+users.Should().ContainSingle(u => u.Email == "test@example.com");
+act.Should().ThrowAsync<ValidationException>();
+```
+
 ## Fakes, not mocks
 
 Use in-memory implementations. Never use Moq or NSubstitute.
@@ -103,4 +115,12 @@ Do not test private methods, internal data structures, or how the implementation
 
 ## Sequencing
 
-Start with the simplest case. Let complexity emerge from the tests — don't anticipate it. One test, one implementation step at a time.
+Progress through test cases in this order:
+
+1. **Simplest happy path** — minimal valid input producing expected output
+2. **Further happy paths** — other valid inputs and normal variations
+3. **Unhappy paths** — invalid inputs, failed preconditions, expected errors (e.g. duplicate email, missing resource)
+4. **Edge cases** — boundary values (empty collections, zero, max values, single-item lists)
+5. **Corner cases** — combinations of constraints that interact (e.g. max-length input that is also a duplicate)
+
+Let complexity emerge from the tests — don't anticipate it. One test, one implementation step at a time. Complete red → green → refactor before moving to the next case.

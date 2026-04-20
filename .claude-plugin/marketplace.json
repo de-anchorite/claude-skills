@@ -7,7 +7,7 @@
     {
       "name": "software-engineering",
       "source": "./software-engineering",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Engineering practices: implementation planning, TDD, DDD, .NET/C# API design, React web-app design.",
       "author": { "name": "David Else" },
       "category": "engineering-practices",
@@ -16,7 +16,7 @@
     {
       "name": "ebook-publishing",
       "source": "./ebook-publishing",
-      "version": "1.0.1",
+      "version": "2.0.0",
       "description": "Fiction ebook writing and publishing skills: book profiling, cover design, story planning, editing (structural/line/proofreading), and publishing.",
       "author": { "name": "David Else" },
       "category": "writing",
