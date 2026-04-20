@@ -50,3 +50,10 @@ After completing each unit of work:
    ```
 5. **Mark the unit `[x]`** in the plan file and save it.
 6. Proceed to the next unit.
+
+## Completion
+
+When all tasks in the plan are marked `[x]`:
+
+1. Delete the plan file.
+2. Inform the user all work is complete.
