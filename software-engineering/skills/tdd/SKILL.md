@@ -23,12 +23,51 @@ Apply this skill to all coding tasks involving implementation, tests, or refacto
 ## The cycle
 
 ```
+PLAN     → Write test plan before any code (see Planning section)
 RED      → Write a failing test for the next behaviour
 GREEN    → Write minimum code to pass it
 REFACTOR → Clean up with all tests green; no new behaviour
+REVIEW   → Stop. Show diff to user. Await approval.
+COMMIT   → git commit accepted changes; mark cycle done in plan
 ```
 
 Cycles are short — minutes, not hours.
+
+## Planning
+
+Before any code, write a test plan to `.claude/plans/tdd-<feature-name>.md`. Format:
+
+```markdown
+# TDD Plan: <feature name>
+
+## Test cases
+- [ ] Simplest happy path: <description>
+- [ ] Happy path: <description>
+- [ ] ...
+- [ ] Unhappy path: <description>
+- [ ] ...
+- [ ] Edge case: <description>
+- [ ] ...
+- [ ] Corner case: <description>
+- [ ] ...
+```
+
+Order cases following the Sequencing section. After each committed cycle, update the plan — mark the completed case `[x]` and save the file.
+
+## Review and commit
+
+After each RED → GREEN → REFACTOR cycle:
+
+1. **Stop.** Do not proceed to the next test case.
+2. **Show the user** a summary of what changed (files modified, test name, what behaviour was added).
+3. **Wait for explicit approval** before committing. If the user requests changes, make them and re-show.
+4. **On approval**, run:
+   ```
+   git add <changed files>
+   git commit -m "<conventional commit message describing the behaviour added>"
+   ```
+5. **Mark the test case `[x]`** in `.claude/plans/tdd-<feature-name>.md` and save it.
+6. Proceed to the next test case.
 
 ## Stubbing new methods
 
