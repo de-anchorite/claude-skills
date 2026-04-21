@@ -35,14 +35,7 @@ Ask:
 
 Read all provided files.
 
-## Step 2 — Announce output method
-
-Check tooling availability and announce to the user:
-1. MCP Office tool (`mcp__office__*` or similar) → "Producing `editing/structural-edit-report.docx` via Office MCP."
-2. `pandoc --version` succeeds → "Producing `editing/structural-edit-report.docx` via pandoc."
-3. None → "No Word tooling found. Saving as `editing/structural-edit-report.md`."
-
-## Step 3 — Structural analysis
+## Step 2 — Structural analysis
 
 Work through this checklist against the draft:
 
@@ -87,7 +80,7 @@ Flag any scene that fails all four tests.
 
 **Horror:** Is dread built gradually? Is the resolution appropriately ambiguous or costly?
 
-## Step 4 — Produce report
+## Step 3 — Produce report
 
 Write a structural edit report with these sections:
 
@@ -98,4 +91,4 @@ Write a structural edit report with these sections:
 5. **Chapter-level notes** — specific structural problems per chapter with one possible approach each
 6. **Questions for the author** — things that might be intentional; ask before flagging as problems
 
-Save to `editing/structural-edit-report.docx` (or `.md` fallback per Step 2).
+Save to `editing/structural-edit-report.md`.

@@ -35,14 +35,7 @@ Read `book-profile.md` for locale (UK/US/AU). This determines correct spelling c
 Ask:
 > "Which chapter(s) would you like me to proofread? Provide the file path(s)."
 
-## Step 2 — Announce output method
-
-Check and announce:
-1. MCP Office tool (`mcp__office__*` or similar) → "Producing Track Changes .docx via Office MCP. Reviewer: Claude Proof."
-2. `pandoc --version` succeeds → "Producing .docx via pandoc. Corrections shown as [DELETED: x][INSERTED: y] blocks."
-3. None → "No Word tooling found. Saving as .md with diff markup."
-
-## Step 3 — Proofread
+## Step 2 — Proofread
 
 Work through the chapter. Record every error:
 - **Location**: paragraph number or approximate position
@@ -52,20 +45,10 @@ Work through the chapter. Record every error:
 
 Do not add explanations beyond the correction type. No opinions on content.
 
-## Step 4 — Produce output
+## Step 3 — Produce output
 
-**MCP (Track Changes):**
-- Create `editing/proofread-<chapter-name>.docx`
-- Reviewer name: "Claude Proof"
-- Mark corrections using Track Changes only — no comments
-
-**pandoc:**
-- Create `editing/proofread-<chapter-name>.docx`
-- Show corrections as: `[DELETED: original][INSERTED: corrected]`
-
-**Fallback .md:**
-- Write `editing/proofread-<chapter-name>.md`
-- Format: `~~original~~` `**corrected**`
+Write `editing/proofread-<chapter-name>.md`:
+- Format: `~~original~~` `**corrected**` inline
 
 At end of session, report:
 - Total errors found

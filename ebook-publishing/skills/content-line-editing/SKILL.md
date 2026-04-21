@@ -1,11 +1,11 @@
 ---
 name: content-line-editing
-description: "Use when a fiction draft chapter needs grammar, consistency, continuity, POV, style, or locale review. Produces Track Changes output. Does not address plot or structure."
+description: "Use when a fiction draft chapter needs grammar, consistency, continuity, POV, style, or locale review. Does not address plot or structure."
 ---
 
 # Content and Line Editing
 
-Review and edit draft chapters for grammar, consistency, continuity, POV enforcement, style adherence, and locale accuracy. Produces output with Track Changes so the author can accept or reject each suggestion.
+Review and edit draft chapters for grammar, consistency, continuity, POV enforcement, style adherence, and locale accuracy. Output saved as `.md` with diff markup so the author can review each suggestion.
 
 ## Scope — strictly enforced
 
@@ -34,14 +34,7 @@ Ask:
 
 Read the provided chapters.
 
-## Step 2 — Announce output method
-
-Check and announce:
-1. MCP Office tool (`mcp__office__*` or similar) → "Producing Track Changes .docx via Office MCP. Reviewer: Claude Edit."
-2. `pandoc --version` succeeds → "Producing .docx via pandoc. Edits shown as [DELETED: x][INSERTED: y] blocks — not native Track Changes."
-3. None → "No Word tooling found. Saving as .md with diff markup."
-
-## Step 3 — Line edit
+## Step 2 — Line edit
 
 Work through each chapter systematically. For every issue found, record:
 - **Location**: chapter name/number, paragraph position
@@ -55,22 +48,10 @@ Track separately:
 - **POV violation log**: all POV-related issues
 - **Inline edits**: all grammar, style, clarity, locale edits
 
-## Step 4 — Produce output
+## Step 3 — Produce output
 
-**MCP (Track Changes):**
-- Create `editing/line-edit-<chapter-name>.docx`
-- Reviewer name: "Claude Edit"
-- Mark deletions and insertions using Track Changes
-- Add continuity errors and POV violations as Word Review Comments on the relevant passage
-
-**pandoc:**
-- Create `editing/line-edit-<chapter-name>.docx`
-- Show edits as: `[DELETED: original text][INSERTED: suggested text]`
-- Add continuity/POV issues as `[NOTE: issue description]` inline
-
-**Fallback .md:**
-- Write `editing/line-edit-<chapter-name>.md`
-- Format: `~~deleted text~~` and `**inserted text**`
-- List continuity/POV issues at end of file
+Write `editing/line-edit-<chapter-name>.md`:
+- Format deletions as `~~deleted text~~` and insertions as `**inserted text**`
+- List continuity errors and POV violations at end of file under `## Continuity / POV Issues`
 
 Tell the user the output path and which format was used.
