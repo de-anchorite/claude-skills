@@ -122,3 +122,4 @@ Keep components small. Split when complex — don't add props. Prefer compositio
 If the superpowers plugin is installed:
 - **Do NOT invoke `superpowers:test-driven-development`** — its TDD behaviours may differ subtly and undermine the patterns defined here. This skill is the authority for TDD on React/web.
 - Invoke `superpowers:systematic-debugging` when a test fails unexpectedly or a cycle stalls.
+- **All other superpowers skills apply normally** — follow `using-superpowers` protocol for everything except `superpowers:test-driven-development`. This includes `superpowers:brainstorming`, `superpowers:writing-plans`, `superpowers:verification-before-completion`, `superpowers:finishing-a-development-branch`, etc.

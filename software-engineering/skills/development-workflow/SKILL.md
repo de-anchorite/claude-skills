@@ -69,6 +69,7 @@ If the superpowers plugin is installed, augment each phase:
 
 | Phase | Invoke |
 |---|---|
+| Brainstorming | `superpowers:brainstorming` before planning a new feature |
 | Planning | `superpowers:writing-plans` for plan structure and format |
 | Execution | `superpowers:executing-plans` for review checkpoint discipline |
 | Before claiming done | `superpowers:verification-before-completion` |
