@@ -46,8 +46,13 @@ After completing each unit of work:
 4. **On approval**, run:
    ```
    git add <changed files>
-   git commit -m "<conventional commit message describing what was added>"
+   git commit -m "<message>"
    ```
+   Commit message format:
+   - Match existing project commit style; conventional commits (`type(scope): summary`) preferred
+   - Subject ≤50 chars, imperative mood ("Add X", not "Added X"), no trailing period
+   - Body only when "why" isn't obvious; wrap at 72 chars
+   - **Never** add AI attribution — no `Co-authored-by: Claude`, "Generated with Claude Code", or any similar trailer
 5. **Mark the unit `[x]`** in the plan file and save it.
 6. Proceed to the next unit.
 
