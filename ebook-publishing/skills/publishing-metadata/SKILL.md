@@ -1,6 +1,6 @@
 ---
 name: publishing-metadata
-description: "Generate publishing metadata for fiction ebooks: BISAC categories, Amazon browse categories, 7 keywords, series fields, content rating, ISBN guidance. Reads book-profile.md. Triggers: 'publishing metadata', 'Amazon categories', 'kdp metadata', 'book keywords', 'set up my metadata'."
+description: "Use when preparing to publish a fiction ebook and needing BISAC categories, Amazon browse categories, keywords, content rating, or ISBN guidance."
 ---
 
 # Publishing Metadata

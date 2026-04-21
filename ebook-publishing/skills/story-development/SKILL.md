@@ -1,6 +1,6 @@
 ---
 name: story-development
-description: "Create a genre-aware story beat sheet and plot structure for a fiction book. Reads book-profile.md. Triggers: 'develop my plot', 'create beat sheet', 'plan my story', 'story structure', 'outline my novel'."
+description: "Use when developing plot structure and a genre-aware beat sheet for a fiction book, after completing the book profile."
 ---
 
 # Story Development

@@ -1,6 +1,6 @@
 ---
 name: content-line-editing
-description: "Line edit fiction draft chapters: grammar, consistency, continuity, POV enforcement, style adherence, locale accuracy. Produces Word Track Changes output. Does NOT make structural changes. Triggers: 'line edit', 'content edit', 'edit my chapter', 'check consistency', 'copy edit'."
+description: "Use when a fiction draft chapter needs grammar, consistency, continuity, POV, style, or locale review. Produces Track Changes output. Does not address plot or structure."
 ---
 
 # Content and Line Editing

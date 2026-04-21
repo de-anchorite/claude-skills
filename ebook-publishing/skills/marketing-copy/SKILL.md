@@ -1,6 +1,6 @@
 ---
 name: marketing-copy
-description: "Write fiction book marketing copy: Amazon/Facebook ad headlines and body, 7-day social media launch post set, newsletter announcement, ARC request email. Reads book-profile.md and book-description.md. Triggers: 'write marketing copy', 'create ads', 'launch copy', 'social posts', 'newsletter announcement', 'ARC email'."
+description: "Use when preparing a fiction book launch and needing Amazon ads, Facebook ads, social media posts, newsletter announcement, or ARC request email copy."
 ---
 
 # Marketing Copy

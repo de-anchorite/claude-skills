@@ -1,6 +1,6 @@
 ---
 name: writing-style
-description: "Create a prose style guide for a fiction book: POV rules, tense, voice, dialogue conventions, locale, and genre dos/don'ts. Reads book-profile.md. Used by content-line-editing as reference. Triggers: 'create style guide', 'define my writing style', 'establish my voice', 'writing style', 'prose guidelines'."
+description: "Use when establishing or documenting a fiction book's prose style covering POV, tense, voice, dialogue conventions, and locale rules. Referenced by content-line-editing."
 ---
 
 # Writing Style

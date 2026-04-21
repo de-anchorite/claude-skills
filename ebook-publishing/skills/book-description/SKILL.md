@@ -1,6 +1,6 @@
 ---
 name: book-description
-description: "Write fiction book blurbs and back-cover descriptions. Three hook-style variants in short (~150 words) and long (~400 words) form, genre-coded. Reads book-profile.md. Output used by marketing-copy skill. Triggers: 'write my blurb', 'book description', 'back cover copy', 'write my synopsis', 'Amazon description'."
+description: "Use when writing blurbs, back-cover copy, or Amazon descriptions for a fiction book. Output is used by the marketing-copy skill."
 ---
 
 # Book Description

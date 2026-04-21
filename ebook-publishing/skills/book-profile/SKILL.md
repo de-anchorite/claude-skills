@@ -1,6 +1,6 @@
 ---
 name: book-profile
-description: "Foundation skill for ebook projects. Sets up directory structure and saves book-profile.md for all other ebook skills to read. Triggers: 'set up my book', 'create book profile', 'new book project', 'start my novel', or when another ebook skill cannot find book-profile.md."
+description: "Use when starting a new fiction book project, or when another ebook-publishing skill cannot find book-profile.md. Run first — all other ebook-publishing skills depend on the output."
 ---
 
 # Book Profile

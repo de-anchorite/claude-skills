@@ -1,6 +1,6 @@
 ---
 name: proofreading
-description: "Final proofread of near-complete fiction draft chapters: spelling, punctuation, typos, formatting consistency only. No content, style, or structural suggestions — actively declines if asked. Produces Word Track Changes output. Triggers: 'proofread', 'final proofread', 'check for errors', 'proof my chapter', 'spelling and punctuation check'."
+description: "Use when a fiction chapter is near-final and needs spelling, punctuation, typo, and formatting checks only. Not for content or style feedback."
 ---
 
 # Proofreading

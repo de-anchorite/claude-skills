@@ -1,6 +1,6 @@
 ---
 name: series-planner
-description: "Plan a multi-book fiction series: series arc, per-book arcs, character trajectory, world-building continuity, series bible. Can convert an existing standalone project to series directory layout. Triggers: 'plan my series', 'series arc', 'map out my series', 'series bible', 'series planner'."
+description: "Use when planning a multi-book fiction series arc, per-book structure, character trajectories, and world-building continuity, or when converting a standalone project to series layout."
 ---
 
 # Series Planner

@@ -1,6 +1,6 @@
 ---
 name: chapter-planning
-description: "Create a scene-by-scene chapter outline with goals, conflicts, POV, and word count targets. Reads book-profile.md and story-development.md. Triggers: 'plan my chapters', 'chapter outline', 'scene list', 'outline my chapters', 'scene by scene breakdown'."
+description: "Use when story structure is complete and the author needs a scene-by-scene chapter outline with POV, goals, conflict, and word count targets per scene."
 ---
 
 # Chapter Planning

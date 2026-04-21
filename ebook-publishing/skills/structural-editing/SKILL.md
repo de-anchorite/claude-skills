@@ -1,6 +1,6 @@
 ---
 name: structural-editing
-description: "Big-picture developmental edit of a fiction draft: plot holes, pacing, structure, character arc consistency, scene necessity. No prose or grammar feedback. Produces Word report. Triggers: 'structural edit', 'big picture edit', 'developmental edit', 'review my plot structure', 'story edit'."
+description: "Use when a fiction draft needs big-picture feedback on plot logic, pacing, act structure, character arc consistency, or scene necessity. Does not address prose or grammar."
 ---
 
 # Structural Editing

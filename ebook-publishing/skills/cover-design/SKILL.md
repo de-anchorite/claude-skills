@@ -1,6 +1,6 @@
 ---
 name: cover-design
-description: "Generate AI image prompts for fiction book cover design, with MCP image generation if available. Iterates from multiple concepts to a refined final cover with typography spec. Triggers: 'design my cover', 'create book cover', 'generate cover prompts', 'cover art'."
+description: "Use when creating AI image prompts for a fiction book cover, or when the author is ready to develop cover concepts and typography spec."
 ---
 
 # Cover Design

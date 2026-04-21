@@ -1,6 +1,6 @@
 ---
 name: character-development
-description: "Build deep character profiles including wound, want, need, arc, and dialogue voice for fiction characters. Reads book-profile.md. Triggers: 'develop my character', 'character profile', 'build character arc', 'who is my protagonist', 'character development'."
+description: "Use when building or deepening a fiction character's wound, want, need, arc, and dialogue voice before drafting."
 ---
 
 # Character Development
