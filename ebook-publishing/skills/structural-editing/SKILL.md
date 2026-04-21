@@ -39,9 +39,8 @@ Read all provided files.
 
 Check tooling availability and announce to the user:
 1. MCP Office tool (`mcp__office__*` or similar) → "Producing `editing/structural-edit-report.docx` via Office MCP."
-2. `python -c "import docx"` succeeds → "Producing `editing/structural-edit-report.docx` via python-docx."
-3. `pandoc --version` succeeds → "Producing `editing/structural-edit-report.docx` via pandoc."
-4. None → "No Word tooling found. Saving as `editing/structural-edit-report.md`."
+2. `pandoc --version` succeeds → "Producing `editing/structural-edit-report.docx` via pandoc."
+3. None → "No Word tooling found. Saving as `editing/structural-edit-report.md`."
 
 ## Step 3 — Structural analysis
 

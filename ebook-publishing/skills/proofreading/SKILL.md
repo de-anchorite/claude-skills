@@ -39,9 +39,8 @@ Ask:
 
 Check and announce:
 1. MCP Office tool (`mcp__office__*` or similar) → "Producing Track Changes .docx via Office MCP. Reviewer: Claude Proof."
-2. `python -c "import docx"` succeeds → "Producing Track Changes .docx via python-docx. Reviewer: Claude Proof."
-3. `pandoc --version` succeeds → "Producing .docx via pandoc. Corrections shown as [DELETED: x][INSERTED: y] blocks."
-4. None → "No Word tooling found. Saving as .md with diff markup."
+2. `pandoc --version` succeeds → "Producing .docx via pandoc. Corrections shown as [DELETED: x][INSERTED: y] blocks."
+3. None → "No Word tooling found. Saving as .md with diff markup."
 
 ## Step 3 — Proofread
 
@@ -55,7 +54,7 @@ Do not add explanations beyond the correction type. No opinions on content.
 
 ## Step 4 — Produce output
 
-**MCP or python-docx (Track Changes):**
+**MCP (Track Changes):**
 - Create `editing/proofread-<chapter-name>.docx`
 - Reviewer name: "Claude Proof"
 - Mark corrections using Track Changes only — no comments

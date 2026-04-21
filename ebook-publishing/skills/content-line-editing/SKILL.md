@@ -38,9 +38,8 @@ Read the provided chapters.
 
 Check and announce:
 1. MCP Office tool (`mcp__office__*` or similar) → "Producing Track Changes .docx via Office MCP. Reviewer: Claude Edit."
-2. `python -c "import docx"` succeeds → "Producing Track Changes .docx via python-docx. Reviewer: Claude Edit."
-3. `pandoc --version` succeeds → "Producing .docx via pandoc. Edits shown as [DELETED: x][INSERTED: y] blocks — not native Track Changes."
-4. None → "No Word tooling found. Saving as .md with diff markup."
+2. `pandoc --version` succeeds → "Producing .docx via pandoc. Edits shown as [DELETED: x][INSERTED: y] blocks — not native Track Changes."
+3. None → "No Word tooling found. Saving as .md with diff markup."
 
 ## Step 3 — Line edit
 
@@ -58,7 +57,7 @@ Track separately:
 
 ## Step 4 — Produce output
 
-**MCP or python-docx (Track Changes):**
+**MCP (Track Changes):**
 - Create `editing/line-edit-<chapter-name>.docx`
 - Reviewer name: "Claude Edit"
 - Mark deletions and insertions using Track Changes

@@ -118,6 +118,6 @@ If you're interested, [reply to this email / click here / fill out this form] by
 
 ## Step 8 — Save output
 
-Check tooling and announce method (same priority as editing skills: MCP Office → python-docx → pandoc → .md fallback).
+Check tooling and announce method (same priority as editing skills: MCP Office → pandoc → .md fallback).
 
 Save `publishing/marketing-copy.docx` (or `.md`). Organise with clear section headings per channel.
