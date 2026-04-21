@@ -57,3 +57,15 @@ When all tasks in the plan are marked `[x]`:
 
 1. Delete the plan file.
 2. Inform the user all work is complete.
+
+## Superpowers integration
+
+If the superpowers plugin is installed, augment each phase:
+
+| Phase | Invoke |
+|---|---|
+| Planning | `superpowers:writing-plans` for plan structure and format |
+| Execution | `superpowers:executing-plans` for review checkpoint discipline |
+| Before claiming done | `superpowers:verification-before-completion` |
+| After all tasks complete | `superpowers:finishing-a-development-branch` |
+| Code review | `superpowers:requesting-code-review` after significant work |

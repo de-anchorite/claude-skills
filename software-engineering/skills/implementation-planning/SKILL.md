@@ -51,3 +51,9 @@ Assert: [What is expected]
 - Not a list of classes and methods to create
 - Not a sequence of implementation steps
 - Not a guarantee that the further test cases are correct or complete
+
+## Superpowers integration
+
+If the superpowers plugin is installed:
+- Invoke `superpowers:brainstorming` before planning any new feature.
+- Invoke `superpowers:writing-plans` for multi-step plans — it provides plan format, structure, and review checkpoints.

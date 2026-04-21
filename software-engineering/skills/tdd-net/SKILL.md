@@ -131,3 +131,9 @@ Progress through test cases in this order:
 5. **Corner cases** — combinations of constraints that interact (e.g. max-length input that is also a duplicate)
 
 Let complexity emerge from the tests — don't anticipate it. One test, one implementation step at a time. Complete red → green → refactor before moving to the next case.
+
+## Superpowers integration
+
+If the superpowers plugin is installed:
+- **Do NOT invoke `superpowers:test-driven-development`** — its TDD behaviours may differ subtly and undermine the patterns defined here. This skill is the authority for TDD on .NET.
+- Invoke `superpowers:systematic-debugging` when a test fails unexpectedly or a cycle stalls.
