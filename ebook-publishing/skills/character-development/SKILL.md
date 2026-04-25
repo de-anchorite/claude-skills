@@ -7,9 +7,13 @@ description: "Use when building or deepening a fiction character's wound, want, 
 
 Build a complete character profile — psychological depth, arc trajectory, relationship map, and distinctive voice.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
-Read `book-profile.md`. Note genre, tone, protagonist(s), antagonist, core conflict.
+Read `book-profile.md`. Note genre, tone, protagonist(s), antagonist, core conflict, and series name/book number.
+
+If this is a series book, scan sibling `book-NN/planning/character-development.md` files. Build a list of already-profiled characters across the series — note their names and which book(s) they appear in. This enables cross-book relationship linking in Step 5.
 
 ## Step 2 — Which character?
 
@@ -37,6 +41,18 @@ For each character, work through this framework. Make specific suggestions for e
 - **Need**: What do they actually need to be whole? This is often the opposite of what they think they want, and is what the story's theme is about.
 - **Fear**: What does achieving their need require them to face or give up?
 
+### Appearance
+
+Capture enough detail to describe the character in a cover image prompt:
+
+- **Age**: approximate (e.g., "late 30s")
+- **Build**: height and physique (e.g., "tall and wiry", "stocky and broad-shouldered")
+- **Hair**: colour, length, style (e.g., "close-cropped silver", "long dark braids")
+- **Eyes**: colour and any notable quality (e.g., "pale grey, unsettling stillness")
+- **Skin tone**: descriptive (e.g., "deep brown", "olive", "pale with freckles")
+- **Distinguishing features**: scars, tattoos, unusual colouring, prosthetics, etc.
+- **Typical clothing / silhouette**: what do they usually wear? What does their silhouette read as from a distance?
+
 ### Arc trajectory
 
 - **Start state**: How does the wound/lie manifest in their behaviour at the story's opening?
@@ -61,10 +77,12 @@ For each character, work through this framework. Make specific suggestions for e
 ## Step 5 — Relationship map
 
 For each significant relationship this character has:
-- Other character's name
+- Other character's name — and if they are from a different book in the series, note the book (e.g., "Mara [Book 01]")
 - Nature of the relationship (ally, rival, mentor, romantic interest, mirror)
 - What does this character want from the other person?
 - What does the other person's presence force this character to confront?
+
+If the series character list from Step 1 contains characters relevant to this profile, include them here. Also note if this character themselves appears in other books — list which ones and what their role is there.
 
 ## Step 6 — Save output
 
@@ -72,6 +90,17 @@ Append to or create `planning/character-development.md`:
 
 ```markdown
 ## [Character Name]
+
+<!-- appears_in: Book NN[, Book NN] — list all books in the series this character features in -->
+
+### Appearance
+- **Age**: 
+- **Build**: 
+- **Hair**: 
+- **Eyes**: 
+- **Skin tone**: 
+- **Distinguishing features**: 
+- **Typical clothing / silhouette**: 
 
 ### Core Profile
 - **Wound**: 
@@ -94,9 +123,15 @@ Append to or create `planning/character-development.md`:
 - Avoids discussing: 
 - Distinctive phrase: 
 
+### Series appearances
+<!-- If standalone, omit this section -->
+| Book | Role in that book |
+|---|---|
+
 ### Relationships
-| Character | Relationship | Want from them | Forces confrontation of |
-|---|---|---|---|
+| Character | Book | Relationship | Want from them | Forces confrontation of |
+|---|---|---|---|---|
+<!-- Use "this book" in the Book column for same-book characters, or "Book NN" for cross-series characters -->
 ```
 
 Ask the user if they want to develop another character before closing.

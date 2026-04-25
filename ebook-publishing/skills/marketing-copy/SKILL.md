@@ -7,6 +7,8 @@ description: "Use when preparing a fiction book launch and needing Amazon ads, F
 
 Write the marketing materials needed to launch your fiction book.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
 Read `book-profile.md` and `publishing/book-description.md` (if present). Extract: title, genre, tone, emotional promise, short blurb.

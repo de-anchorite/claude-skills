@@ -7,11 +7,15 @@ description: "Use when developing plot structure and a genre-aware beat sheet fo
 
 Build a complete story structure — beat sheet, act breakdown, key plot points, and pacing notes — tailored to your genre's conventions.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
 Read `book-profile.md`. Extract: genre, subgenre, protagonist(s), antagonist, core conflict, setting, tone, word count target.
 
 If not found, ask the user to run `book-profile` first.
+
+Invoke the `folder-structure` skill. If any planning files are found outside `planning/`, resolve misplacements before proceeding.
 
 ## Step 2 — Choose story framework
 

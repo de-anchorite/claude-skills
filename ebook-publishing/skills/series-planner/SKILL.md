@@ -7,6 +7,8 @@ description: "Use when planning a multi-book fiction series arc, per-book struct
 
 Plan a multi-book series and optionally convert a standalone project to a series directory layout.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
 Read `book-profile.md` from the current book directory (the anchor book — usually Book 1).

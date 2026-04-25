@@ -1,11 +1,13 @@
 ---
 name: book-profile
-description: "Use when starting a new fiction book project, or when another ebook-publishing skill cannot find book-profile.md. Run first — all other ebook-publishing skills depend on the output."
+description: "Use when starting a new fiction book project, or when another ebook-publishing skill cannot find book-profile.md. Run first — all other ebook-publishing skills depend on the output. Also use this skill when updating a book profile."
 ---
 
 # Book Profile
 
 This is the foundation skill. Run it first. Every other ebook-publishing skill reads `book-profile.md` that this skill produces.
+
+**Save all output files immediately on completion. Never ask the user for permission to save.**
 
 ## Step 1 — Scan existing files
 
@@ -35,6 +37,8 @@ If series, also ask:
 - Series name
 - Approximate number of books planned
 - This book's number in the series (e.g., Book 1 of 3)
+
+If a series, or converting the single book to a series, make sure you invoke the series planner and store the series planner output.
 
 ## Step 3 — Gather remaining metadata
 
@@ -123,6 +127,15 @@ locale: "<UK|US|AU>"
 ```
 
 ## Step 6 — Close
+
+Invoke the `folder-structure` skill to audit the directory. This catches any existing files that landed outside the expected layout before further work begins.
+
+For each significant character extracted in Step 1 (protagonists, antagonists, and named characters with meaningful roles), check `planning/character-development.md`:
+- If a profile is missing: invoke the `character-development` skill. Pre-fill from what was extracted in Step 1 and confirmed in the book-profile metadata.
+
+Check for `planning/writing-style.md`:
+- If it **does not exist**: invoke the `writing-style` skill now. Pre-fill from context already gathered: locale, genre, tone, and any POV, tense, or voice patterns visible in existing draft files scanned in Step 1.
+- If it **exists**: offer to update it — files scanned in Step 1 may have revealed style details not yet captured.
 
 Tell the user:
 - Path where `book-profile.md` was saved

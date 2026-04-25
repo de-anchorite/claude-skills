@@ -7,6 +7,8 @@ description: "Use when preparing to publish a fiction ebook and needing BISAC ca
 
 Generate the metadata needed to publish your fiction ebook on Amazon KDP, Draft2Digital, IngramSpark, and other platforms.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
 Read `book-profile.md`. Extract: title, genre, subgenre, series info, target audience, comps, locale.

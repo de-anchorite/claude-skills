@@ -7,6 +7,8 @@ description: "Use when story structure is complete and the author needs a scene-
 
 Turn your beat sheet into a chapter-by-chapter scene list with goals, conflicts, POV assignments, and word count targets.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
 Read `book-profile.md` and `planning/story-development.md` if present. Extract: genre, word count target, protagonist(s), beat sheet if available.

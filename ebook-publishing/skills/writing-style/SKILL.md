@@ -7,6 +7,8 @@ description: "Use when establishing or documenting a fiction book's prose style 
 
 Establish a clear prose style guide for your book. The content-line-editing skill reads `planning/writing-style.md` when reviewing chapters.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
 Read `book-profile.md`. Note: genre, tone, mood, target audience, locale (UK/US/AU).

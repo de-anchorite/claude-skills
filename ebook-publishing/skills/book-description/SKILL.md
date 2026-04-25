@@ -7,6 +7,8 @@ description: "Use when writing blurbs, back-cover copy, or Amazon descriptions f
 
 Write compelling blurbs and back-cover descriptions. Produces three variants using different hook styles, each in short and long form.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Step 1 — Load book context
 
 Read `book-profile.md`. Extract: title, genre, subgenre, protagonist(s), antagonist, core conflict, setting, tone, comps, target audience.

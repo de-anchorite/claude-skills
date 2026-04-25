@@ -7,6 +7,8 @@ description: "Use when a fiction draft needs big-picture feedback on plot logic,
 
 Review your draft for big-picture issues. This skill does not comment on prose, grammar, or spelling — those belong to content-line-editing and proofreading.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Scope — strictly enforced
 
 **In scope:**
@@ -30,10 +32,15 @@ If you notice a prose issue, note it only as "this chapter may benefit from line
 
 Read `book-profile.md`, `planning/story-development.md` (if present), and `planning/chapter-planning.md` (if present).
 
+Invoke the `folder-structure` skill. If draft files are missing from `drafts/` or editing files are outside `editing/`, resolve misplacements before requesting files from the user.
+
 Ask:
 > "Which draft files should I review? You can give me specific chapter files, a full manuscript, or your planning documents."
 
 Read all provided files.
+
+Identify named characters appearing in the draft. For any character who drives scenes, has dialogue, or appears across multiple chapters, check `planning/character-development.md`:
+- If a profile is missing: invoke the `character-development` skill before proceeding. The structural analysis references character arcs — profiles must exist first. Pre-fill from what the draft reveals about the character.
 
 ## Step 2 — Structural analysis
 
@@ -92,3 +99,9 @@ Write a structural edit report with these sections:
 6. **Questions for the author** — things that might be intentional; ask before flagging as problems
 
 Save to `editing/structural-edit-report.md`.
+
+## Step 4 — Writing style
+
+Check for `planning/writing-style.md`:
+- If it **does not exist**: invoke the `writing-style` skill. Pre-fill from the draft content read in Step 1 — extract POV mode, tense, narrative voice, dialogue conventions, and locale from the chapters reviewed.
+- If it **exists**: offer to update it — the full-draft read performed in this review may have surfaced patterns across chapters worth adding or correcting in the style guide.

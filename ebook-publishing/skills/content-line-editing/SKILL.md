@@ -7,6 +7,8 @@ description: "Use when a fiction draft chapter needs grammar, consistency, conti
 
 Review and edit draft chapters for grammar, consistency, continuity, POV enforcement, style adherence, and locale accuracy. Output saved as `.md` with diff markup so the author can review each suggestion.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Scope — strictly enforced
 
 **In scope:**
@@ -29,10 +31,18 @@ Review and edit draft chapters for grammar, consistency, continuity, POV enforce
 
 Read `book-profile.md` and `planning/writing-style.md` (if present). Note: genre, locale, POV mode, tense, voice characteristics.
 
+Invoke the `folder-structure` skill. If chapter files are found outside `drafts/` or edited files outside `editing/`, resolve misplacements before requesting files from the user.
+
+Check for `planning/writing-style.md`:
+- If it **does not exist**: invoke the `writing-style` skill before proceeding. Pre-fill from `book-profile.md` context (locale, genre, tone). The line-editing that follows will reference the resulting style guide.
+
 Ask:
 > "Which chapter(s) would you like me to line edit? Provide the file path(s)."
 
 Read the provided chapters.
+
+Identify named characters in the chapters. For any character who speaks, acts, or is described with meaningful detail, check `planning/character-development.md`:
+- If a profile is missing: invoke the `character-development` skill. Pre-fill appearance, name, and role from what the chapters reveal. Continuity checks in Step 2 will reference these profiles.
 
 ## Step 2 — Line edit
 
@@ -55,3 +65,5 @@ Write `editing/line-edit-<chapter-name>.md`:
 - List continuity errors and POV violations at end of file under `## Continuity / POV Issues`
 
 Tell the user the output path and which format was used.
+
+If `planning/writing-style.md` exists: offer to update it — patterns noticed during line editing (recurring POV choices, dialogue conventions, locale usage) may warrant additions or corrections.

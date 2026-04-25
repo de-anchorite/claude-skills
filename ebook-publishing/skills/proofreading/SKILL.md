@@ -7,6 +7,8 @@ description: "Use when a fiction chapter is near-final and needs spelling, punct
 
 Final-pass error correction: spelling, punctuation, typos, formatting consistency. This skill makes no content, style, or structural suggestions — even if it notices them.
 
+**Save all output files immediately on completion. Never ask the user for permission to save.**
+
 ## Scope — strictly enforced
 
 **In scope:**
@@ -55,3 +57,10 @@ At end of session, report:
 - Breakdown by type (spelling: N, punctuation: N, typos: N, etc.)
 - Output file path
 - No content opinions
+- **Unknown characters**: list any named characters encountered that have no entry in `planning/character-development.md`. Do not analyse them — just list the names and suggest running `character-development`.
+
+## Step 4 — Writing style
+
+Check for `planning/writing-style.md`:
+- If it **does not exist**: invoke the `writing-style` skill. Pre-fill from the chapter(s) just proofread — extract locale, formatting conventions (e.g., italics for internal thought, chapter heading style), and any consistent patterns observed.
+- If it **exists**: offer to update it if new locale-specific patterns, punctuation conventions, or formatting rules were spotted during proofreading.
